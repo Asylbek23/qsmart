@@ -1,0 +1,31 @@
+mixin concept()
+	+b.SECTION.concept#concept
+		.container
+			+b.title-wrapper
+				.title-info
+					span 05
+					span.title-line
+					span Концепция
+				h2.title-text Smart-<strong>технологии</strong> строительства:
+
+			+e.img
+				//- +e.img_wrapper
+				//- 	+e.IMG(src="img/concept/bg.webp", alt="image").desktop
+				//- 	+e.IMG(src="img/concept/bg-mb.webp", alt="image").mobile
+
+				+e.items
+					+e.item.--one
+						a(href="#popup-1") Основание
+						p#popup-1.js-popup Железобетонный монолит
+					+e.item.--two
+						a(href="#popup-2") Витражи
+						p#popup-2.js-popup Алюминиевая конструкция
+					+e.item.--three
+						a(href="#popup-3") Облицовка фасада
+						p#popup-3.js-popup Гранит и декоративная штукатурка
+					+e.item.--four
+						a(href="#popup-4") Окна
+						p#popup-4.js-popup Металлопластиковые с тройным остеклением
+					+e.item.--five
+						a(href="#popup-5") Коммуникации
+						p#popup-5.js-popup Система очистки воды

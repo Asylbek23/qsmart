@@ -1,0 +1,57 @@
+mixin layouts()
+	+b.SECTION.layouts#layouts
+		.container
+			+b.title-wrapper
+				.title-info
+					span 06
+					span.title-line
+					span Планировки
+				h2.title-text Подбор <strong>квартиры</strong>
+				p Мы разработали для вас различные типы планировок, чтобы вы нашли свою идеальную квартиру:
+
+			+e.wrapper
+				//- IMAGES ----------------------->>>
+				+e.img
+					img(src="img/layouts/flat-1.webp", alt="image" width="236" height="377")
+					button
+
+				//- CONTENT ----------------------->>>
+				+e.content
+					+b.tabs
+						//- Tab Rooms
+						+e.rooms
+							+e.subtitle Выберите комнатность:
+							+e.UL.rooms_list
+								+b.LI.tab 1 комн.
+								+b.LI.tab 2 комн.
+								+b.LI.tab.active 3 комн.
+								+b.LI.tab 4 комн.
+
+						//- Tab Size
+						+e.sizes
+							+e.subtitle Выберите площадь:
+							+e.UL.sizes_list
+								+b.LI.tab 35 м²
+								+b.LI.tab 62,2 м²
+								+b.LI.tab.active 67,4 м²
+								+b.LI.tab 68,5 м²
+								+b.LI.tab 70,7 м²
+								+b.LI.tab 84,7 м²
+								+b.LI.tab 86,2 м²
+								+b.LI.tab 85,3 м²
+								+b.LI.tab 86,2 м²
+								+b.LI.tab 90,7 м²
+
+					//- Info Block
+					+e.info
+						+b.tabs_info
+							+e.descr
+								+e.title 3-x комнатная квартира
+								+e.list
+									+e.item
+										p Площадь:
+										+e.size 67,4 м²
+									+e.item
+										p Срок сдачи:
+										+e.date 2022 / 3 квартал
+							+b.BUTTON.btn(data-hystmodal="#myModal") Забронировать

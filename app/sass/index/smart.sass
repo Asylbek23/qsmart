@@ -1,0 +1,94 @@
+.smart
+	+adaptive-value('padding-top', 135, 65, 1)
+	z-index: 1
+
+	.title-wrapper
+		+xs-block
+			max-width: 320px
+
+	&__wrapper
+		display: flex
+		+to(768px)
+			flex-direction: column
+
+	&__content
+		+sm-block
+			flex-direction: column
+			align-items: flex-start
+
+	&__descr
+		+adaptive-value('margin-top', 70, 35, 1)
+
+	&__info
+		margin-top: 90px
+		+to(768px)
+			margin-top: 55px
+
+	&__text
+		max-width: 990px
+		line-height: 2.1
+		+adaptive-value('font-size', 22, 16, 1)
+		margin-right: 60px
+		+sm-block
+			margin-right: 0
+
+	&__item
+		color: #002196
+		white-space: nowrap
+		font-family: $main_font_bold
+		+adaptive-value('font-size', 34, 26, 1)
+		+adaptive-value('margin-top', 65, 40, 1)
+		&:first-of-type
+			margin-top: 0
+		span
+			display: block
+			color: #000
+			font-family: $main_font_regular
+			+adaptive-value('font-size', 18, 14, 1)
+
+	&__presentation
+		+adaptive-value('margin-top', 85, 40, 1)
+
+	&__desktop
+		+xs-block
+			display: none
+
+	&__mobile
+		display: none
+		+xs-block
+			display: block
+			width: 100%
+
+	&__toggle
+		&_block
+			display: flex
+			align-items: center
+			justify-content: space-between
+			+adaptive-value('padding-top', 30, 10, 1)
+			+adaptive-value('padding-bottom', 30, 10, 1)
+			+md-block
+				justify-content: space-evenly
+		&_descr
+			max-width: 316px
+			+adaptive-value('font-size', 18, 14, 1)
+			line-height: 1.7
+			+md-block
+				display: none
+		&_day
+			cursor: pointer
+			+adaptive-value('font-size', 24, 15, 1)
+			color: #898989
+			.active
+				color: $blue
+		&_night
+			cursor: pointer
+			+adaptive-value('font-size', 24, 15, 1)
+			color: #898989
+			.active
+				color: $blue
+
+	&__all_photo
+		color: #282828
+		border-bottom: 1px solid #232323
+		+md-block
+			display: none

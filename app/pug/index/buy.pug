@@ -1,0 +1,23 @@
+mixin buy()
+	+b.SECTION.buy#buy
+		.container
+
+			+e.content
+
+				+b.title-wrapper
+					.title-info
+						span 07
+						span.title-line
+						span Способы покупки
+					h2.title-text <strong>Рассрочка</strong> от застройщика
+
+				+e.info
+					+e.info_title Срок погашения - до ввода в эксплуатацию.
+					+e.percentages
+						+e.percent.from 0%
+							span Ставка
+						+e.percent.to от 30%
+							span Первоначальный взнос
+					+e.ps Ипотека по всем доступным программам
+
+			+e.img

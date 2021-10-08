@@ -1,0 +1,78 @@
+mixin advantages()
+	+b.SECTION.advantages#advantages
+		.container
+			+e.header
+				+b.title-wrapper
+					.title-info
+						span 03
+						span.title-line
+						span Особенности
+					h2.title-text Преимущества жизни по <strong>Smart</strong>
+				+e.subtitle Чтобы получить все самое лучшее, вам даже не нужно выходить за пределы своего двора. В Q-Smart мы предусмотрели каждую мелочь для того, чтобы вы ощущали себя на высоте каждый день.
+
+		+e.content
+			+e.slider.swiper
+				.swiper-wrapper
+					//- Slide 1
+					+b.advantages-slide.swiper-slide
+						+e.descr
+							+e.title Квартиры:
+							+e.P.text В каждой квартире вас ждут высокие 3 м потолки, витражные алюминиевые окна и черновая улучшенная отделка.
+								br
+								br
+								|В нее входят: побеленные стены, стяжка на полу, биметаллические радиаторы, металлическая входная дверь и инженерные сети.
+						+e.img
+							img(src="img/smart/flat.webp", alt="image")
+
+					//- Slide 2
+					+b.advantages-slide.swiper-slide
+						+e.descr
+							+e.title Безопасность:
+							+e.P.text Территория комплекса полностью огорожена и находится под видеонаблюдением камер, которые расположены по всему периметру Q-Smart.
+								br
+								br
+								|В ЖК смогут попасть только жильцы и их гости.
+						+e.img
+							img(src="img/smart/security.webp", alt="image")
+
+					//- Slide 3
+					+b.advantages-slide.swiper-slide
+						+e.descr
+							+e.title «Умный дом»:
+							+e.P.text Аварийные ситуации в вашей квартире полностью исключаются благодаря центральному блоку управления.
+								br.disable
+								br.disable
+								|Он контролирует 5 датчиков: протечки, движения, дыма, открывания двери и электричества. Все что нужно, чтобы чувствовать себя в безопасности.
+						+e.img
+							img(src="img/smart/smart-home.webp", alt="image")
+
+					//- Slide 4
+					+b.advantages-slide.swiper-slide
+						+e.descr
+							+e.title Паркинг:
+							+e.P.text На первом этаже расположен крытый паркинг для автомобилей с системой TrendVario 4300.
+								br.disable
+								br.disable
+								|Такая система позволяет парковать три автомобиля сразу, и перемещать машину с помощью автоматизированной системы управления.
+						+e.img
+							img(src="img/smart/parking.webp", alt="image")
+
+					//- Slide 5
+					+b.advantages-slide.swiper-slide
+						+e.descr
+							+e.title О дворе:
+							+e.P.text На территории комплекса предусмотрены развлечения для всех жителей комплекса.
+								br
+								br
+								|Здесь будут и детские площадки с каруселями, качелями и песочницей, и зоны workout с тренажерами, и даже зоны отдыха с эстетичным эко-навесом.
+						+e.img
+							img(src="img/smart/yard.webp", alt="image")
+
+				//- Swiper Navigation
+				.navigation
+					.swiper-prev
+					.swiper-next
+
+			//- Swiper Pagination
+			.swiper-pagination
+

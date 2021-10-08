@@ -1,0 +1,90 @@
+.hystmodal__window
+	width: 460px
+	min-height: 500px
+	padding: 40px 50px
+	box-shadow: 1px 1px 44px rgba(0, 0, 0, 0.25)
+	position: relative
+	+xs-block
+		width: 340px
+		padding: 25px 20px
+		min-height: 465px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		width: 123px
+		height: 56px
+		background: url($img+'modal/bg.webp') center center/cover no-repeat
+
+.modal
+	&__container
+		margin-top: 15px
+	&__header
+		font-size: 36px
+		text-align: center
+		+sm-block
+			font-size: 30px
+	&__text
+		font-size: 15px
+		color: #2e2e2e
+		text-align: center
+		margin-top: 5px
+	&__inputs
+		margin-top: 20px
+		input
+			outline-color: $blue
+			background: #FBFBFB
+			border: 1px solid #CBCBCB
+			border-radius: 6px
+			margin-bottom: 16px
+			width: 100%
+			height: 54px
+			padding: 0 20px
+	&__checkbox
+		display: flex
+		margin-top: 6px
+		input
+			display: block
+			margin-top: 5px
+		label
+			max-width: 300px
+			font-size: 13px
+			display: block
+			margin-left: 11px
+	&__btn
+		button
+			width: 100%
+			font-family: $main_font_bold
+			font-size: 20px
+			height: 54px
+			margin-top: 25px
+
+	& .hystmodal__close
+		display: flex
+		width: auto
+		height: auto
+		top: 0
+		right: -130px
+		font-size: 14px
+		color: #fff
+		background: initial
+		+sm-block
+			top: -45px
+			right: 0
+			flex-direction: row-reverse
+		span
+			width: 27px
+			height: 27px
+			background: url($img+'modal/close.svg') center center/cover no-repeat
+			top: 0
+			right: -50px
+			&:focus
+				outline: none
+		p
+			margin-left: 18px
+			line-height: 27px
+			+sm-block
+				margin-left: 0
+				margin-right: 15px

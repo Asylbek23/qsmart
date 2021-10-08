@@ -1,0 +1,142 @@
+.footer
+	background-color: #2b2e3c
+	padding-top: 50px
+	color: #fff
+
+	&__top
+		display: flex
+		justify-content: space-between
+		padding-bottom: 25px
+		border-bottom: 1px solid #737373
+		+lg-block
+			flex-direction: column
+
+	&__logo
+		+lg-block
+			border-bottom: 1px solid #737373
+			padding-bottom: 50px
+		&_wrapper
+			display: flex
+			align-items: center
+		&_img
+			+adaptive-value('margin-right', 42, 22, 1)
+			+xs-block
+				width: 105px
+				height: 125px
+		&_text
+			max-width: 235px
+			color: #606475
+			font-size: 16px
+		.footer-social
+			margin-top: 65px
+			+lg-block
+				display: none
+
+	.footer-social
+		display: flex
+		align-items: center
+		span
+			display: block
+			font-size: 14px
+			color: #bababa
+			margin-right: 16px
+		a
+			width: 15px
+			height: 15px
+		.insta--yellow
+			margin-right: 17px
+		.disbale
+			display: none
+			+lg-block
+				display: flex
+
+	&__nav
+		&_header
+			color: #535769
+			font-family: $main_font_bold
+			font-size: 20px
+		&_wrapper
+			display: flex
+			font-size: 16px
+			margin-top: 15px
+		+lg-block
+			margin-top: 25px
+
+	&__list
+		+adaptive-value('margin-right', 105, 72, 1)
+		&:last-of-type
+			margin-right: 0
+
+	&__link
+		a
+			display: block
+			padding: 5px 0
+			transition: color .3s ease
+			&:hover
+				color: #6abcff
+
+	&__contacts
+		max-width: 330px
+		&_header
+			color: #535769
+			font-family: $main_font_bold
+			font-size: 20px
+		&_wrapper
+			font-size: 16px
+			margin-top: 15px
+			+lg-block
+				margin-bottom: 25px
+		+lg-block
+			margin-top: 50px
+
+	&__address
+		span
+			color: #bababa
+			font-size: 14px
+			display: block
+			margin-bottom: 7px
+		address
+			font-family: 'Raleway'
+
+	&__numbers
+		margin-top: 25px
+		span
+			color: #bababa
+			font-size: 14px
+			display: block
+			margin-bottom: 7px
+		a
+			font-size: 16px
+			display: block
+			transition: color .3s ease
+			padding: 4px 0
+			&:hover
+				color: #6abcff
+
+	&__bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 25px 0
+		+sm-block
+			flex-direction: column
+			justify-content: flex-start
+			align-items: flex-start
+			font-size: 14px
+
+	&__developer a
+		display: flex
+		align-items: center
+		color: #fbba29
+		img
+			margin-left: 10px
+			max-width: 50px
+		+sm-block
+			font-size: 14px
+			margin-top: 10px
+			// display: none
+
+	&__rights
+		color: #aaa
+		+sm-block
+			color: #6b6b6b

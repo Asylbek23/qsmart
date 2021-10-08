@@ -1,0 +1,90 @@
+mixin hero()
+	+b.SECTION.hero
+
+		//-------------------- HEADER -------------------->
+		+b.HEADER.header
+			+e.container
+				+e.A(href="#").logo
+				+e.numbers
+					+e.A(href="tel:+77172696796").number +7 (7172) 696-796
+					+e.A(href="tel:+77077696796").number +7 (707) 7 696 796
+				+e.btn
+					button(data-hystmodal="#myModal") Заказать звонок
+				+e.menu
+					+e.menu_text
+						p Меню
+						p Закрыть
+					+e.menu_btns
+						span.top
+						span.middle
+						span.bottom
+
+		//-------------------- HEADER MOBILE -------------------->
+		+b.header_mobile
+			.container
+				+e.NAV.nav
+					+e.H3.nav_header Навигация:
+					+e.UL.nav_wrapper
+						+e.LI.link
+							a(href="#smart") О комплексе
+						+e.LI.link
+							a(href="#home") Умный дом
+						+e.LI.link
+							a(href="#advantages") Приемущества
+						+e.LI.link
+							a(href="#location") Расположение
+						+e.LI.link
+							a(href="#concept") Концепция
+						+e.LI.link
+							a(href="#layouts") Планировки
+						+e.LI.link
+							a(href="#buy") Способ покупки
+						+e.LI.link
+							a(href="#about") О застройщике
+						+e.LI.link
+							a(href="#contacts") Контакты
+
+				+e.contacts
+					+e.H3.contacts_header Контакты:
+					+e.contacts_wrapper
+						+e.address
+							span Отдел продаж:
+							address г. Нур-Султан, пр. Қабанбай батыра 7, оф. 2 ЖК "Премьера 1”
+						+e.numbers
+							span Номера телефонов:
+							+e.A(href="tel:+77172696796").number +7 (7172) 696-796
+							+e.A(href="tel:+77077696796").number +7 (707) 7 696 796
+					.footer-social
+						span Соц.сети:
+						a(href="#").insta
+						a(href="#").fb
+
+				+e.questions
+					+e.questions_title Есть вопросы?
+					+e.questions_text Оставьте свои данные и наши менеджеры свяжутся с Вами в ближайшее время
+					button(data-hystmodal="#myModal").btn Заказать звонок
+
+		//-------------------- CONTAINER -------------------->
+		.container
+			.left-line
+			.center-line
+			.right-line
+
+			+e.content
+				+e.H1.header Q-Smart
+					span Ваш дом к вашим услугам
+				+e.info
+					+e.text Квартиры в рассрочку и ипотеку от 250 000 ₸/м²
+					+e.A(href="#layouts").btn.btn Подбор квартиры
+
+			+e.footer
+				+e.address
+					span Адрес:
+					address угол ул. Ә. Бектұров - пр. Туран
+				+e.date
+					span Ввод в эксплуатацию:
+					strong 3 квартал 2022 г.
+				+e.type
+					span Класс жилья:
+					strong Комфорт +
+

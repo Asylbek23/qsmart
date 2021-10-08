@@ -1,0 +1,28 @@
+mixin home()
+	+b.SECTION.home#home
+		.container
+			+b.title-wrapper
+				.title-info
+					span 02
+					span.title-line
+					span Умный дом
+				h2.title-text Система <strong>«Умный дом»</strong> в подарок при покупке квартиры:
+
+			+e.content
+				+e.items
+					+e.item
+						img(src="img/smart-home/alert.svg", alt="icon")
+						p Мы предусмотрели любую возможную аварийную ситуацию в вашем доме. Система включает в себя датчики: движения, электричества, открытия двери, дыма.
+					+e.item
+						img(src="img/smart-home/phone.svg", alt="icon")
+						p Теперь не нужно переживать, выключили ли вы утюг или не забыли закрыть дверь. Достаточно просто держать под рукой свой смартфон.
+
+					+e.item
+						img(src="img/smart-home/shield.svg", alt="icon")
+						p Все системы управляются с помощью смартфона. Где бы вы ни были: на работе, отдыхе или в гостях, вы всегда будете знать, что ваш дом в безопасности.
+					+e.item
+						img(src="img/smart-home/money.svg", alt="icon")
+						p За дополнительную плату вы можете установить еще 77 различных датчиков, которые значительно облегчат ваш быт и подарят спокойствие.
+
+				+e.img
+					img(src="img/smart-home/building.webp", alt="image")

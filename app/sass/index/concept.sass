@@ -1,0 +1,122 @@
+.concept
+	background-color: #f2f2f2
+	+adaptive-value('padding-top', 110, 45, 1)
+	+adaptive-value('padding-bottom', 125, 40, 1)
+	overflow: hidden
+
+	&__img
+		background: url($img+'concept/bg.webp') center center/cover no-repeat
+		width: 100%
+		+adaptive-value('height', 888, 600, 1)
+		+adaptive-value('margin-top', 70, 27, 1)
+
+		display: flex
+		flex-direction: column
+		justify-content: center
+		+xs-block
+			width: 110%
+			margin-left: -15px
+			margin-right: -15px
+
+	&__items
+		// max-width: 1065px
+		margin: 0 auto
+
+		+adaptive-value('width', 1065, 325, 1)
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+		height: 100px
+
+		a
+			display: inline-block
+			line-height: 45px
+			background-color: #fff
+			height: 45px
+			padding: 0 20px
+			+adaptive-value('font-size', 17, 14, 1)
+			font-family: $main_font_bold
+			position: relative
+			+sm-block
+				height: 35px
+				line-height: 35px
+			&:before
+				// display: none
+				content: ''
+				position: absolute
+				top: 0
+				left: -50px
+				background: url($img+'concept/plus.svg') center center/cover no-repeat
+				height: 45px
+				width: 46px
+				+sm-block
+					width: 35px
+					height: 36px
+					left: -40px
+			+xs-block
+				padding: 0 12px
+		p
+			display: none
+			// display: inline-block
+			font-size: 13px
+			padding: 14px 16px
+			background: rgba(0, 0, 0, 0.71)
+			color: #fff
+			font-family: $main_font_regular
+			margin-top: 5px
+			max-width: 215px
+			+sm-block
+				max-width: 200px
+				padding: 9px 13px
+				font-size: 11px
+		&--one
+			margin-left: 60px
+			+sm-block
+				margin-left: 30px
+				margin-top: 30px
+		&--two
+			align-items: flex-end
+			margin-right: 40px
+			+sm-block
+				align-items: start
+				margin-left: 50px
+		&--three
+			align-items: center
+			margin-left: 80px
+			+sm-block
+				margin-top: 20px
+				margin-right: 20px
+				margin-left: 0
+				align-items: flex-end
+		&--four
+			margin-left: 150px
+			+sm-block
+				align-items: flex-start
+				margin-top: 30px
+				margin-left: 30px
+		&--five
+			align-items: center
+			margin-top: 100px
+			+sm-block
+				align-items: flex-end
+				margin-top: 30px
+
+
+	&__desktop
+		+xs-block
+			object-fit: cover
+			width: 100%
+			height: 100%
+			display: none
+
+	&__mobile
+		display: none
+		+xs-block
+			display: block
+			width: 100%
+			object-fit: cover
+		+to(425px)
+			height: 550px

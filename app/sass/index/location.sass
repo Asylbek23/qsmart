@@ -1,0 +1,329 @@
+.location
+	+adaptive-value('padding-top', 165, 65, 1)
+	+adaptive-value('padding-bottom', 80, 10, 1)
+
+	// .container
+		// background: #a4c26c
+
+	&__subtitle
+		max-width: 330px
+		line-height: 2
+		+adaptive-value('font-size', 18, 16, 1)
+		+adaptive-value('margin-top', 80, 40, 1)
+		+to(1600px)
+			max-width: none
+			margin-top: 40px
+		+xs-block
+			color: #707070
+
+	//-------------------- SWIPER SLIDER -------------------->
+	& .swiper
+		overflow: visible
+		+to(1600px)
+			// overflow-x: hidden
+			margin-top: 50px
+		+to(425px)
+			margin-left: -20px
+		+to(400px)
+			margin-left: -50px
+
+	& .swiper-wrapper
+		align-items: flex-start
+		align-items: flex-end
+		height: 460px
+		margin-top: -100px
+		+to(1600px)
+			height: 100%
+			margin-top: 0
+
+	&__slide
+		width: 390px
+		height: 200px
+		margin: 0 37px
+		position: relative
+		+to(1600px)
+			margin: 0 20px
+		+xs-block
+			margin: 0 10px
+		+to(425px)
+			width: 360px
+		+to(400px)
+			width: 285px
+			height: 180px
+
+	& .swiper-slide-active
+		width: 915px
+		height: 460px
+		overflow: hidden
+		+to(1600px)
+			width: 700px
+			height: 400px
+		+lg-block
+			width: 650px
+			height: 400px
+		+md-block
+			width: 550px
+			height: 350px
+		+sm-block
+			width: 400px
+			height: 300px
+		+to(425px)
+			width: 360px
+			height: 260px
+		+to(400px)
+			width: 285px
+			height: 235px
+
+		& .location__descr
+			color: #fff
+
+			position: absolute
+			bottom: 20px
+			left: 40px
+			width: 100%
+			padding-right: 80px
+
+			display: flex
+			align-items: center
+			justify-content: space-between
+			+sm-block
+				flex-direction: column
+				align-items: flex-start
+				left: 15px
+
+	&__slider
+		.navigation
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+			width: 210px
+			height: 53px
+			position: absolute
+			top: -100px
+			right: 0
+
+			z-index: 2
+			+to(1600px)
+				top: auto
+				right: auto
+				left: 0
+				bottom: -75px
+				width: 30%
+
+				justify-content: start
+			+md-block
+				width: 80%
+			+to(425px)
+				left: 25px
+				bottom: -65px
+			+to(400px)
+				left: 55px
+				bottom: -65px
+
+			.next,
+			.prev
+				width: 53px
+				height: 53px
+				cursor: pointer
+				position: relative
+				background: #333
+				+to(1600px)
+					order: 2
+					margin: 0 5px
+				+sm-block
+					width: 44px
+					height: 44px
+			.next
+				background: url($img+'location/right.svg') center center/cover no-repeat
+			.prev
+				background: url($img+'arrow.svg') center center/cover no-repeat
+				transform: rotate(180deg)
+			.pagination
+				width: auto
+
+				font-size: 24px
+				font-family: 'Montserrat Medium'
+				color: #aeaeae
+				+to(1600px)
+					order: 1
+					flex-grow: 1
+				+sm-block
+					font-size: 20px
+
+			.swiper-pagination-current
+				color: $blue
+
+	&__descr
+		display: none
+
+	&__title
+		font-size: 30px
+		font-family: $main_font_bold
+		+md-block
+			font-size: 24px
+		+to(425px)
+			font-size: 20px
+
+	&__road
+		color: $blue
+		font-size: 16px
+		background-color: #fff
+		border-radius: 4px
+		font-family: $main_font_bold
+		padding-right: 13px
+		padding-left: 58px
+		padding-top: 5px
+		padding-bottom: 5px
+		position: relative
+		+md-block
+			font-size: 14px
+			padding-left: 45px
+			margin-top: 5px
+		+to(425px)
+			font-size: 13px
+		&:before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 17px
+			transform: translateY(-40%)
+			height: 26px
+			width: 26px
+			background: url($img+'location/car.svg') center center/cover no-repeat
+			+md-block
+				width: 20px
+				height: 20px
+				left: 13px
+
+	&__img
+		width: 100%
+		height: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			display: block
+
+	//-------------------- SWIPER SLIDER -------------------->
+
+
+	&__map
+		width: 100%
+		height: 560px
+		position: relative
+		+adaptive-value('margin-top', 150, 130, 1)
+
+		overflow: hidden
+		&_cards
+			display: flex
+			align-items: flex-start
+
+			position: absolute
+			top: 20px
+			left: 20px
+			height: 60px
+			width: 100%
+			// padding: 0 15px
+			z-index: 5
+
+			overflow-x: scroll
+			scrollbar-width: none
+			&::-webkit-scrollbar
+				display: none
+		&_card
+			display: flex
+			align-items: center
+			justify-content: center
+
+			color: #000
+			background: #fff
+			box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25)
+			font-size: 14px
+			white-space: nowrap
+			border-radius: 4px
+			cursor: pointer
+
+			height: 45px
+			padding: 0 20px
+			padding-left: 40px
+
+			position: relative
+
+			margin-right: 10px
+			+xs-block
+				height: 40px
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 20px
+				width: 6px
+				height: 6px
+				border-radius: 50%
+			&--blue
+				color: #fff
+				background: #0e1c50
+				padding-left: 20px
+				&:before
+					display: none
+			&--numbers
+				padding-left: 20px
+				&:before
+					display: none
+			&--shops
+				&:before
+					background-color: #EA0967
+			&--kindergarten
+				&:before
+					background-color: #A44372
+			&--schools
+				&:before
+					background-color: #EB000E
+			&--healths
+				&:before
+					background-color: #0FC189
+			&--services
+				&:before
+					background-color: #DB9A7E
+
+
+	&__items
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		justify-content: space-between
+		+adaptive-value('margin-top', 55, 25, 1)
+		+sm-block
+			flex-wrap: wrap
+
+	&__item
+		width: 33%
+		position: relative
+		font-family: 'Raleway';
+		+adaptive-value('font-size', 22, 16, 1)
+		+adaptive-value('padding-left', 32, 15, 1)
+		+adaptive-value('margin-bottom', 50, 30, 1)
+		+sm-block
+			width: 50%
+		+xs-block
+			// width: 170px
+
+		span
+			display: block
+			color: #787878
+			+adaptive-value('font-size', 18, 14, 1)
+			// +adaptive-value('margin-top', 13, 10, 1)
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 1px
+			height: 95%
+			background-color: #b7b7b7
+
+#map
+	width: 100%
+	height: 100%

@@ -1,0 +1,38 @@
+mixin smart()
+	+b.SECTION.smart#smart
+		.container
+
+			+e.wrapper
+				+e.content
+					+b.title-wrapper
+						.title-info
+							span 01
+							span.title-line
+							span О проекте
+						h2.title-text Сочетание <strong>Smart</strong>-решений
+
+					+e.descr
+						+e.P.text <strong>Q-Smart</strong> – это концептуальный жилой комплекс, вобравший в себя все то, что мы так любим: эстетику, функциональность и уникальность. Каждая квартира здесь создана с учетом предпочтений современного человека: увеличенные окна, просторные планировки, отдельные лоджии и высокие потолки. Комфорт жильцов в ЖК Q-Smart на первом месте, поэтому на каждом этаже здесь всего по 4-5 квартир.
+							br
+							br
+							|По вечерам <strong>Q-Smart</strong> загорается яркой подсветкой, изменяющейся под настроение жильцов. Такое решение вкупе с гранитной отделкой и витражными балконами производит лучшее впечатление на гостей и жильцов комплекса.
+
+				+e.info
+					+e.item 35 - 118 м2
+						span Площадь квартир от
+					+e.item 101
+						span Автомест подземный паркинг
+					+e.item 4
+						span Подъезда
+					+e.item от 3 до 5
+						span Квартир на площадке
+
+			+e.presentation
+				+e.img
+					+e.IMG(src="img/smart-solution/building-night.webp", alt="image").desktop
+					+e.IMG(src="img/smart-solution/building-night-mb.webp", alt="image").mobile
+				//- +e.toggle_block
+					+e.toggle_descr Можете посмотреть рендер в ночном и в дневном свете
+					+e.toggle_day День / выкл
+					+e.toggle_night.active Ночь / вкл
+					+e.A(href="#").all_photo Посмотреть все фото

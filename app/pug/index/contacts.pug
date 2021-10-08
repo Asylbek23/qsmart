@@ -1,0 +1,23 @@
+mixin contacts()
+	+b.SECTION.contacts#contacts
+		.container
+			+e.content
+				+e.H2.header Контакты
+				+e.address
+					span Адрес:
+					address г. Нур-Султан, пр. Қабанбай батыра 7, оф. 2 ЖК "Премьера 1”
+				+e.numbers
+					span Номера телефонов:
+					+e.A(href="tel:+77172696796").number +7 (7172) 696-796
+					+e.A(href="tel:+77077696796").number +7 (707) 7 696 796
+
+			+e.FORM.form
+				+e.form_header Получите бесплатную консультацию
+				+e.form_subheader Оставьте свои данные и наши менеджеры свяжутся с Вами в ближайшее время
+				+e.form_inputs
+					input(type="text" placeholder="Как вас зовут?" name="text").input-name
+					input(type="text" placeholder="+7 (ХХХ) -ХХХ-ХХ-ХХ" name="phone").input-phone
+					label(for="checkbox").checkbox
+						input#checkbox(type="checkbox")
+						| Cогласен с политикой обработки персональных данных.
+				button.btn Оставить заявку

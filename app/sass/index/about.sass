@@ -1,0 +1,121 @@
+.about
+	+adaptive-value('padding-top', 130, 60, 1)
+	+adaptive-value('padding-bottom', 130, 45, 1)
+	background-color: #f2f2f2
+
+	.container
+		display: grid
+		align-items: center
+		grid-template-columns: repeat(3, 1fr)
+		+md-block
+			grid-template-columns: repeat(1, 1fr)
+
+	&__img
+		background: url($img+'about/bg.jpg') center center/cover no-repeat
+		margin-right: 40px
+		width: 565px
+		+adaptive-value('width', 565, 340, 1)
+		height: 700px
+		+adaptive-value('height', 700, 421, 1)
+		// min-width: 500px
+
+		grid-column-start: 1
+		grid-column-end: 2
+		grid-row-start: 1
+		grid-row-end: 5
+		// +lg-block
+		+to(1300px)
+		+md-block
+			grid-column-start: 1
+			grid-column-end: 4
+			grid-row-start: 2
+			grid-row-end: 6
+
+			// margin: 0 auto
+			margin-right: 0
+			margin-top: 35px
+			// width: auto
+			// height: 600px
+		+xs-block
+			width: 340px
+			height: 421px
+
+	.title-wrapper
+		max-width: 480px
+
+		grid-column-start: 2
+		grid-column-end: 4
+		grid-row-start: 1
+		grid-row-end: 2
+		// +lg-block
+		+to(1300px)
+		+md-block
+			grid-column-start: 1
+			grid-column-end: 4
+			grid-row-start: 1
+			grid-row-end: 2
+
+			max-width: none
+
+	&__content
+		max-width: 810px
+
+		grid-column-start: 2
+		grid-column-end: 4
+		grid-row-start: 2
+		grid-row-end: 4
+		// +lg-block
+		+to(1300px)
+			grid-column-start: 2
+			grid-column-end: 4
+			grid-row-start: 2
+			grid-row-end: 5
+		+md-block
+			grid-column-start: 1
+			grid-column-end: 4
+			grid-row-start: 6
+			grid-row-end: 8
+
+	&__text
+		+adaptive-value('margin-top', 70, 30, 1)
+		+adaptive-value('font-size', 18, 16, 1)
+		line-height: 2
+
+	&__items
+		display: flex
+		justify-content: space-between
+
+		grid-column-start: 2
+		grid-column-end: 4
+		grid-row-start: 4
+		grid-row-end: 5
+		+adaptive-value('margin-top', 40, 30, 1)
+		+to(1300px)
+			grid-column-start: 1
+			grid-column-end: 4
+			grid-row-start: 5
+			grid-row-end: 6
+
+			justify-content: space-around
+		+md-block
+			grid-row-start: 8
+			grid-row-end: 9
+			justify-content: start
+		+sm-block
+			flex-direction: column
+
+	&__item
+		+adaptive-value('font-size', 34, 30, 1)
+		color: $blue
+		span
+			display: block
+			font-size: 14px
+			color: #212121
+			white-space: nowrap
+			margin-top: 10px
+		+md-block
+			margin-right: 40px
+			&:last-of-type
+				margin-right: 0
+		+sm-block
+			margin-top: 20px

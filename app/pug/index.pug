@@ -1,0 +1,41 @@
+extends template
+
+include index/hero
+include index/smart
+
+include index/home
+include index/advantages
+include index/location
+include index/concept
+include index/layouts
+include index/buy
+include index/about
+include index/contacts
+
+include components/modals
+
+block head
+	head
+		+head({
+			"title": "Q-Smart - ваш дом к вашим услугам",
+			"author": "Q-Smart",
+			"description": "Q-Smart - ваш дом к вашим услугам"
+		})
+
+block content
+	+hero()
+	+smart()
+
+	+home()
+	+advantages()
+	+location()
+	+concept()
+	+layouts()
+	+buy()
+	+about()
+	+contacts()
+
+	+modals()
+
+
+

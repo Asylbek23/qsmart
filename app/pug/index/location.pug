@@ -1,0 +1,80 @@
+mixin location()
+	+b.SECTION.location#location
+		.container
+			+e.header
+				+b.title-wrapper
+					.title-info
+						span 04
+						span.title-line
+						span Расположение
+					h2.title-text Smart-локации <strong>рядом</strong> с вашим домом
+
+				+e.subtitle В каждой квартире вас ждут высокие 3 м потолки, витражные алюминиевые окна и черновая улучшенная отделка.
+
+			+e.slider.swiper
+				.swiper-wrapper
+					//- Slide 1
+					+e.slide.swiper-slide
+						+e.img
+							img(src="img/smart/flat.webp", alt="image")
+						+e.descr
+							+e.title ТЦ Хан шатыр
+							+e.road в 15 минутах
+
+					//- Slide 2
+					+e.slide.swiper-slide
+						+e.img
+							img(src="img/location/han-shatyr.webp", alt="image")
+						+e.descr
+							+e.title ТЦ Хан шатыр
+							+e.road в 15 минутах
+
+					//- Slide 3
+					+e.slide.swiper-slide
+						+e.img
+							img(src="img/smart/flat.webp", alt="image")
+						+e.descr
+							+e.title ТЦ Хан шатыр
+							+e.road в 15 минутах
+
+				//- Swiper Navigation
+				.navigation
+					.prev
+					.pagination
+					.next
+
+					//- Swiper Pagination
+
+
+			+e.map
+				+e.map_cards
+					+e.map_card.--blue Отобразить все
+					+e.map_card.--shops Магазины
+					+e.map_card.--kindergarten Детские сады
+					+e.map_card.--schools Школы
+					+e.map_card.--healths Здоровье
+					+e.map_card.--services Услуги
+					+e.map_card.--numbers +2
+				#map
+
+			+e.items
+				+e.item ТЦ Хан шатыр
+					span 15 мин пешком
+				+e.item Парк “Ғашықтар”
+					span 6 мин на машине
+				+e.item Мечеть “НУР-АСТАНА”
+					span 15 мин пешком
+
+				+e.item Magnum Сash & Carry
+					span 13 мин пешком
+				+e.item Ботанический сад
+					span 15 мин на машине
+				+e.item Ледовая арена "Барыс"
+					span 10 мин на машине
+
+				+e.item KIA ALLUR AUTO
+					span 5 мин пешком
+				+e.item Chevrolet Allur Auto
+					span 5 мин пешком
+				+e.item Тойота Центр Есиль
+					span 5 мин пешком

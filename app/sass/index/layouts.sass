@@ -1,0 +1,166 @@
+.layouts
+	+adaptive-value('padding-top', 90, 60, 1)
+	// +adaptive-value('padding-bottom', 170, 85, 1)
+	+md-block
+		padding-bottom: 130px
+
+	.title-wrapper
+		p
+			font-size: 20px
+			max-width: 640px
+			line-height: 2
+			margin-top: 30px
+
+	&__wrapper
+		display: flex
+		align-items: center
+		+adaptive-value('margin-top', 70, 32, 1)
+		+to(1500px)
+			flex-direction: column
+			align-items: start
+			margin-top: 35px
+
+	&__img
+		border: 1px solid #0033EB
+
+		display: flex
+		align-items: center
+
+		width: 50%
+		min-height: 515px
+		position: relative
+
+		padding: 70px 0
+
+		+to(1500px)
+			min-height: 0
+			height: 390px
+			+adaptive-value('width', 500, 340, 1)
+			padding: 40px 0
+		img
+			display: block
+			margin: 0 auto
+			+to(1500px)
+				width: 100%
+				height: 90%
+				object-fit: contain
+		button
+			background: url($img+'layouts/search.svg') center center/cover no-repeat
+			width: 30px
+			height: 30px
+			position: absolute
+			top: 30px
+			right: 30px
+			+sm-block
+				top: 15px
+				right: 15px
+
+	&__content
+		width: 50%
+		min-height: 515px
+		padding-left: 55px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		+to(1500px)
+			margin-top: 40px
+			padding-left: 0
+			width: auto
+			width: 100%
+			min-height: 0
+
+	&__subtitle
+		font-size: 18px
+
+	&__info
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+to(1500px)
+			justify-content: flex-start
+			margin-top: 30px
+		+sm-block
+			flex-direction: column
+			align-items: flex-start
+
+.tabs
+	&__rooms
+		max-width: 490px
+		&_list
+			+tabs-wrapper
+			.tab
+				padding: 0 23px
+				+xs-block
+					width: 48%
+	&__sizes
+		margin-top: 20px
+		&_list
+			+tabs-wrapper
+			.tab
+				width: 17%
+				+xs-block
+					width: 30%
+
+	&_info
+		border-top: 1px dashed #C4C4C4
+		border-bottom: 1px dashed #C4C4C4
+		line-height: 2
+
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		padding: 20px 0
+		width: 100%
+		+sm-block
+			position: relative
+			padding: 10px 0
+
+		&__descr
+			+sm-block
+				width: 100%
+		&__title
+			+adaptive-value('font-size', 26, 22, 1)
+			font-family: $main_font_bold
+			color: #000
+			margin-bottom: 13px
+		&__list
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+		&__item
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+			p
+				font-size: 14px
+			div
+				font-size: 14px
+				font-family: $main_font_bold
+		.btn
+			font-size: 18px
+			font-family: $main_font_bold
+			height: 54px
+			width: 220px
+			+sm-block
+				position: absolute
+				bottom: -80px
+				left: 0
+				width: 100%
+
+
+.tab
+	font-family: $main_font_bold
+	color: #878787
+	text-align: center
+	cursor: pointer
+	padding: 0 20px
+	border: 1px solid #C2C2C2
+	line-height: 44px
+	white-space: nowrap
+	// margin-right: 13px
+	margin-bottom: 13px
+	&.active
+		color: #fff
+		background-color: $blue

@@ -1,0 +1,63 @@
+html, body
+	overflow-x: hidden
+
+body, button, input
+	font-family: $main_font_regular
+	// font-family: 'Raleway'
+	font-size: 16px
+	// color: $dark
+	line-height: 1.7
+
+button
+	cursor: pointer
+
+strong
+	color: #000
+	font-family: $main_font_bold
+
+.page
+
+.container
+	+wrapper()
+
+.title
+	&-wrapper
+		line-height: 1.5
+	&-info
+		display: flex
+		align-items: center
+		+adaptive-value('font-size', 20, 16, 1)
+		color: #bfbfbf
+		font-family: $main_font_bold
+	&-line
+		background: #bfbfbf
+		+adaptive-value('width', 84, 44, 1)
+		height: 1px
+		margin: 0 16px
+	&-text
+		+adaptive-value('font-size', 50, 36, 1)
+		font-family: $main_font_bold
+		color: $dark
+		+adaptive-value('margin-top', 50, 25, 1)
+		strong
+			color: $blue
+
+.subtitle
+
+.text
+
+.insta
+	display: block
+	background: url($img+'hero/insta.svg') center center/cover no-repeat
+	width: 20px
+	height: 20px
+.fb
+	display: block
+	background: url($img+'hero/fb.svg') center center/cover no-repeat
+	width: 20px
+	height: 20px
+
+.insta--yellow
+	background: url($img+'footer/insta.svg') center center/cover no-repeat
+.fb--yellow
+	background: url($img+'footer/fb.svg') center center/cover no-repeat
